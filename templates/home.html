@@ -1,22 +1,166 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+  <title>SOC Upload</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand text-warning" href="#">#702</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">SOC Progress<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Change Employee</a>
+        </li>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm col-md-10 offset-md-1">
+        <h2 class="py-2">View SOC History</h2>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-sm col-md-10 offset-md-1">
+          <p class="text-muted">For: xxx</p>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm col-md-10 offset-md-1">
+        <div class="accordion" id="socType">
+
+          <div class="card">
+            <div class="card-header" id="breakfast_heading" data-toggle="collapse" data-target="#breakfast">
+              <h2 class="mb-0" data-toggle="collapse" data-target="#breakfast">
+                <button class="btn btn-link collapsed text-muted" type="button" data-toggle="collapse"
+                  data-target="#breakfast" aria-expanded="true" aria-controls="collapseOne">
+                  Breakfast
+                </button>
+              </h2>
+            </div>
+            <div id="breakfast" class="collapse" aria-labelledby="Breakfast SOCs" data-parent="#socType">
+              <div class="card-body">
+                <div class="col-sm">
+                  <button class="btn btn-success btn-block" data-toggle="modal" data-target=".history-modal-lg">Eggs</button>
+                  <button class="btn btn-success btn-block">Eggs</button>
+                  <button class="btn btn-success btn-block">Eggs</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="quality_heading" data-toggle="collapse" data-target="#breakfast">
+              <h2 class="mb-0" data-toggle="collapse" data-target="#quality">
+                <button class="btn btn-link collapsed text-muted" type="button" data-toggle="collapse"
+                  data-target="#quality" aria-expanded="false" aria-controls="collapseTwo">
+                  Quality
+                </button>
+              </h2>
+            </div>
+            <div id="quality" class="collapse" aria-labelledby="Quality SOCs" data-parent="#socType">
+              <div class="card-body">
+                i am quality
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header" id="service_heading" data-toggle="collapse" data-target="#breakfast">
+              <h2 class="mb-0" data-toggle="collapse" data-target="#service">
+                <button class="btn btn-link collapsed text-muted" type="button" data-toggle="collapse"
+                  data-target="#service" aria-expanded="false" aria-controls="collapseThree">
+                  Service
+                </button>
+              </h2>
+            </div>
+            <div id="service" class="collapse" aria-labelledby="Service SOCs" data-parent="#socType">
+              <div class="card-body">
+                i am service
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade history-modal-lg" tabindex="-1" role="dialog" aria-labelledby="History Modal" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">View History for</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="container-fluid">
+                  <div class="row">
+                    <div class="col">
+                      <table class="table">
+                          <tbody>
+                            <tr>
+                              <th scope="row">Last Performed By:</th>
+                              <td>Benjamin Ford</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Score (From Campus):</th>
+                              <td>98%</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Last Verified (From Campus):</th>
+                              <td>28-09-19</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col">
+                        <button class="btn btn-success btn-block btn-lg" id="submitVerf">Mark as Submitted for Verification</button>
+                        <br>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script>
+    $('#submitVerf').on('click',function(){
+      $(this).removeClass('btn-success')
+      $(this).addClass('btn-secondary')
+      $(this).html('Pending Verification..')
+    })
+  </script>
+</body>
+
 </html>
